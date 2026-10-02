@@ -7,7 +7,7 @@ export const heroSlides = [
     image:
       'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80&auto=format&fit=crop',
     label: "WELCOME TO THE L'COFFEE",
-    heading: 'The London\nCoffee House',
+    heading: 'The Nepal\nCoffee House',
     subheading:
       'Handcrafted espresso, ethically sourced beans, and a sanctuary for those who believe great coffee deserves great company.',
   },
