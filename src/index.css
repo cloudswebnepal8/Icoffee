@@ -1,0 +1,110 @@
+/* Google Fonts must come before @import "tailwindcss" — CSS spec requires
+   @import rules to precede other rules (except @charset and @layer). */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* Design tokens as CSS custom properties.
+   Referenced directly with var() where Tailwind classes don't reach. */
+:root {
+  --color-matte-black:   #121212;
+  --color-charcoal:      #181818;
+  --color-secondary:     #202020;
+  --color-coffee-gold:   #C5A880;
+  --color-warm-amber:    #D4A373;
+  --color-off-white:     #F5F1E8;
+  --color-white:         #FFFFFF;
+  --color-muted:         #A5A5A5;
+  --color-border:        #2A2A2A;
+}
+
+/* Tailwind v4 theme extension — lets us write bg-coffee-gold, text-off-white etc. */
+@theme {
+  --color-matte-black:    #121212;
+  --color-charcoal:       #181818;
+  --color-secondary-dark: #202020;
+  --color-coffee-gold:    #C5A880;
+  --color-warm-amber:     #D4A373;
+  --color-off-white:      #F5F1E8;
+  --color-muted-text:     #A5A5A5;
+  --color-border-dark:    #2A2A2A;
+
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-jakarta:  'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #121212;
+  color: #F5F1E8;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Default all headings to Playfair; individual components override size/weight */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+/* focus-visible keeps outlines for keyboard users without showing them on mouse clicks */
+:focus-visible {
+  outline: 2px solid #C5A880;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Custom scrollbar — thin, matches the dark theme */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #121212; }
+::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #C5A880; }
+
+/* If the OS is set to reduce motion, kill all animations immediately.
+   Framer Motion also checks this preference internally, but this catches
+   any CSS animations we define (like ken-burns) that bypass Framer. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration:       0.01ms !important;
+    animation-iteration-count: 1     !important;
+    transition-duration:      0.01ms !important;
+  }
+}
+
+/* Convenience aliases — some utilities are shorter to type this way */
+.font-playfair { font-family: 'Playfair Display', Georgia, serif; }
+.font-jakarta  { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+
+/* Ken Burns: slow zoom applied to each hero background image.
+   The animation runs for the duration of one slide (matches AUTOPLAY_MS).
+   `forwards` keeps it at 1.06x when it finishes so there's no snap-back. */
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.06); }
+}
+.ken-burns {
+  animation: kenBurns 6s ease-out forwards;
+}
+
+/* Radial vignette on the hero section — darkens the edges without
+   touching the centre where the text lives. Applied via ::after
+   so it sits on top of any child background images. */
+.vignette::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.55) 100%);
+  pointer-events: none;
+}

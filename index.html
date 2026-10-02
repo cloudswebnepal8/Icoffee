@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="L'Coffee — Premium London Coffee House. Handcrafted espresso, ethically sourced beans, and a sanctuary for coffee lovers." />
+    <title>L'Coffee — Premium Coffee House</title>
+
+    <!-- Google Fonts preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Skip link for accessibility -->
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -100%;
+        left: 8px;
+        background: #C5A880;
+        color: #121212;
+        padding: 8px 16px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        z-index: 9999;
+        border-radius: 0 0 4px 4px;
+        transition: top 0.2s;
+      }
+      .skip-link:focus {
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip navigation for keyboard users -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
