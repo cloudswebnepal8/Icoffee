@@ -3,6 +3,11 @@ import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Services from './components/Services';
+import PopularMenu from './components/PopularMenu';
+import FeatureHighlight from './components/FeatureHighlight';
+import Gallery from './components/Gallery';
+import Testimonials from './components/Testimonials';
 
 const App = () => {
   return (
@@ -17,11 +22,19 @@ const App = () => {
         <Navbar />
 
         <main id="main-content">
+          {/* Part 1 */}
           <Hero />
           <About />
+
+          {/* Part 2 — inserted directly after About */}
+          <Services />
+          <PopularMenu />
+          <FeatureHighlight />
+          <Gallery />
+          <Testimonials />
         </main>
 
-        {/* Placeholder footer — will be fleshed out in Part 2 */}
+        {/* Footer — will be expanded in Part 3 */}
         <footer
           className="bg-[#181818] border-t border-[#2A2A2A] py-8 text-center"
           aria-label="Site footer"
