@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Leaf } from 'lucide-react';
 import { aboutData } from '../data/coffeeData';
@@ -203,8 +204,8 @@ const About = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <a
-                href="#story"
+              <Link
+                to="/about"
                 className="
                   inline-flex items-center gap-3
                   text-[#C5A880] font-jakarta font-semibold text-[10px] tracking-[0.2em] uppercase
@@ -225,7 +226,7 @@ const About = () => {
                 >
                   <ArrowRight size={14} />
                 </span>
-              </a>
+              </Link>
             </motion.div>
           </div>
 
