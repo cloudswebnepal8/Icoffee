@@ -120,7 +120,7 @@ const Navbar = () => {
                       aria-haspopup="true"
                       className={`flex items-center gap-1 font-jakarta font-medium text-[11px] tracking-[0.12em] uppercase
                         transition-colors duration-200 py-1
-                        ${dropdown ? 'text-[#C5A880]' : 'text-[#F5F1E8]/75 hover:text-[#C5A880]'}
+                        ${(dropdown || link.children?.some(c => pathname === c.to)) ? 'text-[#C5A880]' : 'text-[#F5F1E8]/75 hover:text-[#C5A880]'}
                         focus-visible:outline-none focus-visible:text-[#C5A880]`}
                     >
                       {link.label}
@@ -138,22 +138,26 @@ const Navbar = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 8 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 min-w-[190px] bg-[#181818] border border-[#2A2A2A] py-2 z-50"
+                          className="absolute top-full left-0 mt-2 min-w-[200px] bg-[#181818] border border-[#2A2A2A] py-2 z-50 shadow-2xl"
                           role="menu"
                         >
-                          {link.children.map(child => (
-                            <Link
-                              key={child.label}
-                              to={child.to}
-                              onClick={() => setDropdown(false)}
-                              role="menuitem"
-                              className="flex items-center px-4 py-2.5 font-jakarta text-[11px] tracking-[0.1em] uppercase
-                                         text-[#F5F1E8]/70 hover:text-[#C5A880] hover:bg-[#202020]
-                                         transition-all duration-150 focus-visible:outline-none focus-visible:text-[#C5A880]"
-                            >
-                              {child.label}
-                            </Link>
-                          ))}
+                          {link.children.map(child => {
+                            const isChildActive = pathname === child.to;
+                            return (
+                              <Link
+                                key={child.label}
+                                to={child.to}
+                                onClick={() => setDropdown(false)}
+                                role="menuitem"
+                                className={`flex items-center px-4 py-2.5 font-jakarta text-[11px] tracking-[0.1em] uppercase transition-all duration-150 focus-visible:outline-none
+                                  ${isChildActive
+                                    ? 'text-[#C5A880] bg-[#222222]'
+                                    : 'text-[#F5F1E8]/70 hover:text-[#C5A880] hover:bg-[#202020]'}`}
+                              >
+                                {child.label}
+                              </Link>
+                            );
+                          })}
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -173,7 +177,7 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <Link
-            to="/book-table"
+            to="/reservation"
             className="hidden lg:inline-flex items-center px-5 py-2.5 bg-[#C5A880] text-[#121212]
                        font-jakarta font-bold text-[10px] tracking-[0.18em] uppercase shrink-0
                        transition-all duration-300 hover:bg-[#D4A373]
@@ -275,17 +279,19 @@ const Navbar = () => {
                               transition={{ duration: 0.25 }}
                               className="overflow-hidden pl-4"
                             >
-                              {link.children.map(child => (
-                                <Link
-                                  key={child.label}
-                                  to={child.to}
-                                  className="flex py-2.5 border-b border-[#2A2A2A] last:border-b-0 text-[#A5A5A5] hover:text-[#C5A880]
-                                             font-jakarta text-[10px] tracking-[0.12em] uppercase transition-colors duration-200
-                                             focus-visible:outline-none focus-visible:text-[#C5A880]"
-                                >
-                                  {child.label}
-                                </Link>
-                              ))}
+                              {link.children.map(child => {
+                                const isChildActive = pathname === child.to;
+                                return (
+                                  <Link
+                                    key={child.label}
+                                    to={child.to}
+                                    className={`flex py-2.5 border-b border-[#2A2A2A] last:border-b-0 font-jakarta text-[10px] tracking-[0.12em] uppercase transition-colors duration-200 focus-visible:outline-none
+                                      ${isChildActive ? 'text-[#C5A880] font-semibold' : 'text-[#A5A5A5] hover:text-[#C5A880]'}`}
+                                  >
+                                    {child.label}
+                                  </Link>
+                                );
+                              })}
                             </motion.div>
                           )}
                         </AnimatePresence>
@@ -313,7 +319,7 @@ const Navbar = () => {
               {/* Book CTA inside drawer */}
               <div className="px-6 py-6 border-t border-[#2A2A2A]">
                 <Link
-                  to="/book-table"
+                  to="/reservation"
                   className="flex items-center justify-center w-full py-3.5 bg-[#C5A880] text-[#121212]
                              font-jakarta font-bold text-[10px] tracking-[0.18em] uppercase
                              hover:bg-[#D4A373] transition-colors duration-300
