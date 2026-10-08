@@ -21,13 +21,15 @@ const socialLinks = [
 
 // Quick links section — all internal routes via Link
 const quickLinks = [
-  { label: 'Home',          to: '/'           },
-  { label: 'About Us',      to: '/about'       },
-  { label: 'Coffee Menu',   to: '/menu/coffee' },
-  { label: 'Restaurant',    to: '/menu/restaurant' },
-  { label: 'Blog',          to: '/blog'        },
-  { label: 'Contact',       to: '/contact'     },
-  { label: 'Book a Table',  to: '/book-table'  },
+  { label: 'Home',          to: '/'            },
+  { label: 'About Us',      to: '/about'        },
+  { label: 'Services',      to: '/services'     },
+  { label: 'Reservation',   to: '/reservation'  },
+  { label: 'Our History',   to: '/history'      },
+  { label: 'Photo Gallery', to: '/gallery'      },
+  { label: 'FAQ',           to: '/faq'          },
+  { label: 'Journal & Blog',to: '/blog'         },
+  { label: 'Contact',       to: '/contact'      },
 ];
 
 const SocialIcon = ({ icon: Icon, label, href }) => (
