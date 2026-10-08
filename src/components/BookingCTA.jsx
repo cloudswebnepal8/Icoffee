@@ -32,8 +32,8 @@ const BookingCTA = () => (
       </motion.p>
 
       <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={viewport} transition={{ duration: 0.6, delay: 0.3 }}>
-        {/* BOOK A TABLE → /book-table */}
-        <Link to="/book-table"
+        {/* BOOK A TABLE → /reservation */}
+        <Link to="/reservation"
           className="inline-flex items-center px-10 py-4 bg-[#C5A880] text-[#121212]
                      font-jakarta font-bold text-[10px] tracking-[0.2em] uppercase
                      transition-all duration-300 hover:bg-[#D4A373] hover:shadow-xl hover:shadow-[#C5A880]/20
