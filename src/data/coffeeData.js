@@ -56,9 +56,11 @@ export const navLinks = [
     to: null,
     hasDropdown: true,
     children: [
-      { label: 'Restaurant Menu', to: '/menu/restaurant' },
-      { label: 'Coffee Menu',     to: '/menu/coffee'      },
-      { label: 'Food Services',   to: '/menu/food'        },
+      { label: 'Service',     to: '/services'    },
+      { label: 'Reservation', to: '/reservation' },
+      { label: 'History',     to: '/history'     },
+      { label: 'Gallery',     to: '/gallery'     },
+      { label: 'FAQ',         to: '/faq'         },
     ],
   },
   { label: 'Blog',     to: '/blog'    },
@@ -368,3 +370,176 @@ export const footerGallery = [
   'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=200&q=75&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=200&q=75&auto=format&fit=crop',
 ];
+
+// Comprehensive services catalog for ServicesPage
+export const allServices = [
+  {
+    id: 1,
+    icon: 'UtensilsCrossed',
+    title: 'Food Services',
+    subtitle: 'Culinary Craft',
+    description: 'Fresh farm-to-table breakfast, brunch, and dinner menu crafted with organic ingredients and paired with specialty coffee.',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80&auto=format&fit=crop',
+  },
+  {
+    id: 2,
+    icon: 'Coffee',
+    title: 'Coffee Club & Tasting',
+    subtitle: 'Single Origin Sourcing',
+    description: 'Exclusive monthly coffee subscriptions, cupping sessions, and roast profiling led by certified Q Graders.',
+    image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80&auto=format&fit=crop',
+  },
+  {
+    id: 3,
+    icon: 'Cake',
+    title: 'Custom Birthday & Event Cakes',
+    subtitle: 'Artisanal Bakery',
+    description: 'Handcrafted celebratory cakes and custom dessert tables baked daily by our master French-trained pastry chefs.',
+    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?w=600&q=80&auto=format&fit=crop',
+  },
+  {
+    id: 4,
+    icon: 'ShoppingBag',
+    title: 'Fresh Gourmet Takeout',
+    subtitle: 'Speed & Elegance',
+    description: 'Carefully packaged grab-and-go espresso drinks, signature cold brews, and oven-fresh bakery items on demand.',
+    image: 'https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=600&q=80&auto=format&fit=crop',
+  },
+  {
+    id: 5,
+    icon: 'Pizza',
+    title: 'Wood-Fired Stone Pizza',
+    subtitle: 'Italian Heritage',
+    description: 'Slow-fermented 48-hour sourdough crust baked at 450°C with San Marzano tomatoes and fior di latte mozzarella.',
+    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80&auto=format&fit=crop',
+  },
+  {
+    id: 6,
+    icon: 'Wine',
+    title: 'Signature Organic Mocktails',
+    subtitle: 'Craft Refreshers',
+    description: 'Cold-pressed botanical elixirs, cascara spritzers, and house-infused sparkling teas with zero artificial syrups.',
+    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80&auto=format&fit=crop',
+  },
+];
+
+// History timeline milestones for HistoryPage
+export const historyTimeline = [
+  {
+    year: '1996',
+    date: '25 January 1996',
+    title: "L'Coffee Founded — The First Roast",
+    description: "Started with a modest 5kg vintage roaster and a dream to bring ethical, artisanal single-origin coffee to discerning palates. Our humble boutique quickly became a neighborhood sanctuary.",
+    image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80&auto=format&fit=crop',
+    highlight: 'Started cooking & roasting with passion',
+  },
+  {
+    year: '1998',
+    date: '14 December 1998',
+    title: 'Culinary Distinction & Barista Guild',
+    description: 'Recognized for pioneering farm-to-table breakfast pairings with micro-lot coffees. Our head barista won the national espresso championship, putting our craft on the global map.',
+    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80&auto=format&fit=crop',
+    highlight: 'Awarded premier regional culinary honors',
+  },
+  {
+    year: '2004',
+    date: '10 June 2004',
+    title: 'European Flagship in Paris',
+    description: 'Expanded across borders with our second flagship establishment near Saint-Germain, blending Parisian café culture with our distinct high-altitude roasting philosophy.',
+    image: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=700&q=80&auto=format&fit=crop',
+    highlight: 'A new coffee house welcomed in Paris',
+  },
+  {
+    year: '2008',
+    date: '15 October 2008',
+    title: '100% Direct Trade & ISO 22000 Certified',
+    description: 'Formalized our direct partnerships with family cooperatives across Ethiopia, Colombia, and Nepal, guaranteeing fair wages and certified organic sustainability at every step.',
+    image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=700&q=80&auto=format&fit=crop',
+    highlight: 'Global food safety & direct trade standard',
+  },
+  {
+    year: '2018',
+    date: '22 August 2018',
+    title: 'Master Sensory Lab & Barista Academy',
+    description: 'Opened our flagship research laboratory and sensory tasting lab, training over 350+ certified baristas who now champion specialty coffee culture across the globe.',
+    image: 'https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=700&q=80&auto=format&fit=crop',
+    highlight: 'State-of-the-art training & sensory lab',
+  },
+  {
+    year: '2026',
+    date: 'Present Day',
+    title: 'The Himalayan Chapter & Global Community',
+    description: 'Continuing the craft from Kathmandu to New York, roasting small-batch specialty beans with an unwavering commitment to warmth, community, and perfection in every cup.',
+    image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=700&q=80&auto=format&fit=crop',
+    highlight: 'Crafting the next generation of specialty coffee',
+  },
+];
+
+// Expanded gallery collection for GalleryPage
+export const fullGalleryItems = [
+  { id: 1,  image: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=1000&q=80&auto=format&fit=crop', category: 'Latte Art',    title: 'Rosetta Microfoam Pour',    span: 2 },
+  { id: 2,  image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=1000&q=80&auto=format&fit=crop', category: 'Espresso',     title: 'Golden Tiger Crema Shot',   span: 1 },
+  { id: 3,  image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1000&q=80&auto=format&fit=crop', category: 'Coffee Beans', title: 'Highland Ethiopian Yirgacheffe', span: 1 },
+  { id: 4,  image: 'https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=1000&q=80&auto=format&fit=crop', category: 'Barista',      title: 'Precision Portafilter Tamp', span: 1 },
+  { id: 5,  image: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1000&q=80&auto=format&fit=crop', category: 'Interior',     title: 'Evening Atmosphere & Warmth', span: 2 },
+  { id: 6,  image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=1000&q=80&auto=format&fit=crop', category: 'Cappuccino',   title: 'Velveteen Cappuccino Foam',  span: 1 },
+  { id: 7,  image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1000&q=80&auto=format&fit=crop', category: 'Pastries',     title: 'Flaky French Butter Croissant', span: 1 },
+  { id: 8,  image: 'https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=1000&q=80&auto=format&fit=crop', category: 'Pastries',     title: 'Swedish Cardamom Buns',     span: 2 },
+  { id: 9,  image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=1000&q=80&auto=format&fit=crop', category: 'Espresso',     title: 'Slow Drip Pour-Over Ritual', span: 1 },
+  { id: 10, image: 'https://images.unsplash.com/photo-1521302080334-4bebac2763a6?w=1000&q=80&auto=format&fit=crop', category: 'Latte Art',    title: 'Swan In Etched Porcelain',  span: 1 },
+  { id: 11, image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1000&q=80&auto=format&fit=crop', category: 'Interior',     title: 'The Communal Oak Table',    span: 2 },
+  { id: 12, image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1000&q=80&auto=format&fit=crop', category: 'Barista',      title: 'Artisan Cupping & Profiling', span: 1 },
+];
+
+// Frequently Asked Questions for FAQPage
+export const faqItems = [
+  {
+    id: 1,
+    category: 'General & Coffee',
+    question: "How much customer appreciation and feedback does L'Coffee receive?",
+    answer: "We take immense pride in our 99% guest satisfaction rate across 10+ years of craft. Our community cherishes our single-origin transparency, precision roasting, and warm sanctuary vibe.",
+  },
+  {
+    id: 2,
+    category: 'Reservations & Orders',
+    question: "How do I make a table reservation for dining or events?",
+    answer: "You can book instantly online through our Reservation page, select your preferred date, time slot, and guest count. We confirm within moments and hold your table for up to 20 minutes past the booking time.",
+  },
+  {
+    id: 3,
+    category: 'Reservations & Orders',
+    question: "Can I order coffee and pastries online for pickup or delivery?",
+    answer: "Yes! You can explore our menu online and order for speedy counter pickup or delivery through our partner services, ensuring your coffee arrives at peak temperature and freshness.",
+  },
+  {
+    id: 4,
+    category: 'Quality & Sourcing',
+    question: "Where do you source your coffee beans, and are they certified organic?",
+    answer: "We source exclusively through direct trade partnerships with smallholder farms in Ethiopia, Colombia, Guatemala, and the Himalayan hills of Nepal. All batches meet strict ISO 22000 standards with 100% organic traceability.",
+  },
+  {
+    id: 5,
+    category: 'Events & Services',
+    question: "Do you host birthday celebrations, private dinners, or corporate meetings?",
+    answer: "Absolutely! We offer dedicated private mezzanine seating, custom multi-tier artisan cakes, curated coffee flights, and tailored catering packages for groups of 10 to 60 guests.",
+  },
+  {
+    id: 6,
+    category: 'General & Coffee',
+    question: "What dairy and plant-based milk alternatives do you offer?",
+    answer: "We offer local grass-fed organic whole milk as well as barista-grade oat milk, almond milk, and coconut milk crafted specifically to steam smoothly and pair harmoniously with espresso.",
+  },
+  {
+    id: 7,
+    category: 'Quality & Sourcing',
+    question: "How can I see verified reviews and culinary feedback?",
+    answer: "You can explore guest testimonials right on our website, visit our Google Reviews with over 1,200+ five-star ratings, or speak directly with our team on social media.",
+  },
+  {
+    id: 8,
+    category: 'Events & Services',
+    question: "Do you offer barista training courses or home brewing workshops?",
+    answer: "Yes, our weekend Sensory & Latte Art workshops run twice a month at our Roastery lab. Attendees learn grinder calibration, pour-over extraction, and milk texturing with our master baristas.",
+  },
+];
+
